@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>"Whammy IV Drip"</title>
+
+    <script src="./node_modules/infusion/dist/infusion-all.js"></script>
+    <script src="./node_modules/flocking/dist/flocking-base.js"></script>
+
+    <script src="./node_modules/gpii-binder/src/js/binder.js"></script>
+    <script src="./node_modules/gpii-binder/src/js/transforms.js"></script>
+
+    <script src="./node_modules/flocking/src/ui/selectbox/js/selectbox.js"></script>
+    <script src="./node_modules/flocking/src/ui/midi/midi-port-selector/js/midi-port-selector.js"></script>
+    <script src="./node_modules/flocking/src/ui/midi/midi-connector/js/midi-connector.js"></script>
+
+    <script src="./node_modules/flocking-midi-select-ng/src/js/auto-midi-system.js"></script>
+    <script src="./node_modules/flocking-midi-select-ng/src/js/select-box.js"></script>
+    <script src="./node_modules/flocking-midi-select-ng/src/js/auto-midi-port-selector.js"></script>
+    <script src="./node_modules/flocking-midi-select-ng/src/js/auto-midi-connector.js"></script>
+
+    <script src="./src/js/whammy-iv-drip.js"></script>
+</head>
+<body>
+    <div class="whammy-iv-drip-container">
+        <div class="midi-output"></div>
+
+        <h3>Pedal</h3>
+        <p>(0="toe up", 127="toe down")</p>
+
+        <input type="text" class="whammy-pedal"/>
+
+        <div class="mode-select">
+            <h3>Detune</h3>
+
+            <input type="radio" id="whammy-mode-0" name="whammy-mode" value="0"/>
+            <label for="whammy-mode-0">Shallow</label>
+
+            <input type="radio" id="whammy-mode-1" name="whammy-mode" value="1"/>
+            <label for="whammy-mode-1">Deep</label>
+
+
+            <h3>Whammy</h3>
+
+            <input type="radio" id="whammy-mode-2" name="whammy-mode" value="2"/>
+            <label for="whammy-mode-2">Up 2 Octaves</label>
+
+            <input type="radio" id="whammy-mode-3" name="whammy-mode" value="3"/>
+            <label for="whammy-mode-3">Up 1 Octave</label>
+
+            <input type="radio" id="whammy-mode-4" name="whammy-mode" value="4"/>
+            <label for="whammy-mode-4">Down 1 Octave</label>
+
+            <input type="radio" id="whammy-mode-5" name="whammy-mode" value="5"/>
+            <label for="whammy-mode-5">Down 2 Octaves</label>
+
+            <input type="radio" id="whammy-mode-6" name="whammy-mode" value="6"/>
+            <label for="whammy-mode-6">Dive Bomb</label>
+
+            <input type="radio" id="whammy-mode-7" name="whammy-mode" value="7"/>
+            <label for="whammy-mode-7">Drop Tune</label>
+
+            <h3>Harmony</h3>
+
+            <!-- TODO invert these -->
+            <input type="radio" id="whammy-mode-8" name="whammy-mode" value="8"/>
+            <label for="whammy-mode-8">Down Octave / Up Octave</label>
+
+            <input type="radio" id="whammy-mode-9" name="whammy-mode" value="9"/>
+            <label for="whammy-mode-9">Down 5th / Down 4th</label>
+
+            <input type="radio" id="whammy-mode-10" name="whammy-mode" value="10"/>
+            <label for="whammy-mode-10">Down 4th / Down 3rd</label>
+
+            <input type="radio" id="whammy-mode-11" name="whammy-mode" value="11"/>
+            <label for="whammy-mode-11">Up 5th / Up 7th</label>
+
+            <input type="radio" id="whammy-mode-12" name="whammy-mode" value="12"/>
+            <label for="whammy-mode-12">Up 5th / Up 6th</label>
+
+            <input type="radio" id="whammy-mode-13" name="whammy-mode" value="13"/>
+            <label for="whammy-mode-13">Up 4th / Up 5th</label>
+
+            <input type="radio" id="whammy-mode-14" name="whammy-mode" value="14"/>
+            <label for="whammy-mode-14">Up 3rd / Up 4th</label>
+
+            <input type="radio" id="whammy-mode-15" name="whammy-mode" value="15"/>
+            <label for="whammy-mode-15">Up Flat 3rd / Up 3rd</label>
+
+            <input type="radio" id="whammy-mode-16" name="whammy-mode" value="16"/>
+            <label for="whammy-mode-16">Up 2nd / Up 3rd</label>
+        </div>
+    </div>
+
+    <script>
+        var whammy = whammy.iv.drip("body");
+    </script>
+</body>
+</html>

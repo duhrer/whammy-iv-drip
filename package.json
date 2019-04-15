@@ -1,0 +1,21 @@
+{
+    "name": "whammy-iv-drip",
+    "version": "1.0.0",
+    "description": "A WebMIDI harness to precisely control the Digitech Whammy IV.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Tony Atkins <tony@raisingthefloor.org>",
+    "license": "BSD-3-Clause",
+    "dependencies": {
+        "flocking": "2.0.0-dev.20190101T211732Z.efbf6e2",
+        "flocking-midi-select-ng": "1.0.0-dev.20190219T121520Z.893914c",
+        "gpii-binder": "1.0.5",
+        "infusion": "3.0.0-dev.20190212T124747Z.23b4bc89d"
+    },
+    "devDependencies": {
+        "gpii-grunt-lint-all": "1.0.0-dev.20180629T081932Z.8a1f7fe",
+        "grunt": "1.0.1"
+    }
+}
